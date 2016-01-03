@@ -32,9 +32,20 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 from sys import exit, prefix, version_info, argv
 
+def downloadWithPprogressbar(file_url,path):
+	import requests
+	from clint.textui import progress
 
+	r = requests.get(file_url, stream=True)
+	with open(path, 'wb') as f:
+		total_length = int(r.headers.get('content-length'))
+		for chunk in progress.bar(r.iter_content(chunk_size=1024), expected_size=(total_length/1024) + 1): 
+			if chunk:
+				f.write(chunk)
+				f.flush()
 
 def downloadDistrib():
+	import os
 	filename = "https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip"
 
 	# make a temp dir
@@ -43,9 +54,10 @@ def downloadDistrib():
 	p='.'
 
 	# Download and uncompress
-	import pip
-	pip.main(['install','--download='+p, '--no-deps' ,filename])
-	import os
+	#import pip
+	#pip.main(['install','--download='+p, '--no-deps' ,filename])
+	downloadWithPprogressbar(filename,os.path.join(p,"master.zip"))
+	
 	import zipfile
 	z=zipfile.ZipFile(os.path.join(p,"master.zip"))
 	z.extractall(p)

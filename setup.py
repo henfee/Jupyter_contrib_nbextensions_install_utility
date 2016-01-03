@@ -93,7 +93,7 @@ setup(name='Jupyter_contrib_nbextensions_install_utility',
       keywords=['IPython Jupyter notebook extension'],
       classifiers=filter(None, classifiers.split("\n")),
       license='BSD',
-      #install_requires = ['ipython >=4','jupyter','psutil','pyaml'],
+      install_requires = ['ipython >=4','jupyter','psutil','pyaml','requests','clint'],
       scripts = ['Jupyter_notebook_contribs/Jupyter_nb_contribs.py'],
       packages=['Jupyter_notebook_contribs'],
       package_data = {'Jupyter_notebook_contribs': ['*.txt', '*.rst', '*.md']}

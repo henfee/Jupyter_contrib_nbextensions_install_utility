@@ -6,4 +6,6 @@ nbformat
 traitlets
 psutil
 pyaml
+requests
+clint
 
