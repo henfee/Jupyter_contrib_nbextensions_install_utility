@@ -205,7 +205,7 @@ def main(*args):
 	)
 
 if __name__ == '__main__':	
-    import argparse
+    import argparse 
     print(main.__doc__)
     whatitdoes="""This program downloads the current master of the collection\n
            of Ipython-contrib noteboook extensions. \n
