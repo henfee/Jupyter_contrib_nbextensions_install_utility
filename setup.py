@@ -81,7 +81,7 @@ if ver < (3, 0):
     exit(-1)
 
 
-
+ 
 setup(name='Jupyter_contrib_nbextensions_install_utility',
       version='0.0.1',
       description=__doc__.split("\n")[2],
