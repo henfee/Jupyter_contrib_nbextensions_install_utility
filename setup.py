@@ -82,7 +82,7 @@ if ver < (3, 0):
 
 
 
-setup(name='Jupyter_contrib_nbextensions install utility',
+setup(name='Jupyter_contrib_nbextensions_install_utility',
       version='0.0.1',
       description=__doc__.split("\n")[2],
       long_description='\n'.join(__doc__.split("\n")[2:]).strip(),
