@@ -2,7 +2,7 @@ Installation:
 
 clone and `python3 setup.py install`
 or
->pip install https://rawgit.com/jfbercher/Jupyter_contrib_nbextensions_install_utility/master/dist/Jupyter_contrib_nbextensions%20install%20utility-0.0.1.tar.gz 
+>pip install https://rawgit.com/jfbercher/Jupyter_contrib_nbextensions_install_utility/master/dist/Jupyter_contrib_nbextensions_install_utility-0.0.1.tar.gz 
 
 **************************************************************************
 **IPython-contrib-nbextensions - (C) 2013-2016, IPython-contrib Developers - 
