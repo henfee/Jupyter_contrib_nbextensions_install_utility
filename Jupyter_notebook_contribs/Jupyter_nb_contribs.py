@@ -51,7 +51,7 @@ def downloadDistrib():
 	# make a temp dir
 	import tempfile
 	p=tempfile.mkdtemp()
-	p='.'
+	#p='.'
 
 	# Download and uncompress
 	#import pip
