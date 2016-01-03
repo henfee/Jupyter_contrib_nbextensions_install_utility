@@ -134,11 +134,8 @@ class InstallNbExt(install):
 		import pip, os, Jupyter_notebook_contribs
 		filepath = os.path.abspath(os.path.dirname(Jupyter_notebook_contribs.__file__))
 		reqfile=os.path.join(filepath,"requirements.txt")
-		print("Installing requirements")
-		if user:
-			pip.main(["install","-r", reqfile,'-q','--user'])
-		else:
-			pip.main(["install","-r", reqfile,'-q'])
+		print("Installing requirements (should have already been installed)")
+		pip.main(["install","-r", reqfile,'-q','--user'])
 
 		print("Installing the nbextensions")
 		p = downloadDistrib()
@@ -222,10 +219,7 @@ if __name__ == '__main__':
     parser.add_argument('command', choices=['install',  'reconfigure'],
     help = r'',
     default = 'install', type = str,  nargs = 1)
-    parser.add_argument('--user', nargs='?', help = r'install requirements as user or not (boolean)',
-    default = False, const=True, type = bool)
     arguments = parser.parse_args()
-    user=arguments.user
     main(arguments.command[0])
 
 
