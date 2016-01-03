@@ -135,7 +135,7 @@ class InstallNbExt(install):
 		filepath = os.path.abspath(os.path.dirname(Jupyter_notebook_contribs.__file__))
 		reqfile=os.path.join(filepath,"requirements.txt")
 		print("Installing requirements (should have already been installed)")
-		pip.main(["install","-r", reqfile,'--user'])
+		pip.main(["install","-r", reqfile,'-q','--user'])
 
 		print("Installing the nbextensions")
 		p = downloadDistrib()
